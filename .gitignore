@@ -1,0 +1,8 @@
+# database
+/database.sqlite*
+
+# log
+/visits.log
+
+# PhpStorm
+.idea

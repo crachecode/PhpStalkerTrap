@@ -1,0 +1,10 @@
+{
+    "name": "crachecode/PhpStalkerTrap",
+    "description": "PhpStalkerTrap is made to collect information on someone visiting a web page.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Timothee Crozat"
+        }
+    ]
+}
