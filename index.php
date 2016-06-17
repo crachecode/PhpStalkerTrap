@@ -49,7 +49,7 @@ else {
 }
 
 $output = $date.'
-ip : '.$ip.'
+ip : '.$ip.' http://www.ip-tracker.org/locator/ip-lookup.php?ip='.$ip.'
 user agent : '.$user_agent.'
 accept language : '.$accept_language.'
 referer : '.$referer.'
@@ -80,9 +80,14 @@ curl_setopt_array($ch,
 		CURLOPT_FAILONERROR => true,
 		CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13',
 		CURLOPT_CONNECTTIMEOUT => 999,
-		CURLOPT_HTTPAUTH => CURLAUTH_ANY,
-		CURLOPT_POST => 1,
-		CURLOPT_HTTPHEADER=>array("Content-type: multipart/form-data"),
+		CURLOPT_SSL_VERIFYPEER => false,
+		CURLOPT_VERBOSE => true,
+		//CURLOPT_HTTPAUTH => CURLAUTH_ANY,
+		//CURLOPT_POST => 1,
+		//CURLOPT_POSTFIELDS => [],
+		CURLOPT_FOLLOWLOCATION => true,
+		CURLOPT_AUTOREFERER => true,
+		CURLOPT_HTTPHEADER => array("Content-type: multipart/form-data"),
 	)
 );
 $response = curl_exec($ch);
