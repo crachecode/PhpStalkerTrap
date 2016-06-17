@@ -4,8 +4,8 @@ $url = '';
 $email = '';
 
 try {
-	$dbfile = '/var/tmp/database.sqlite';
-	//$dbfile = dirname(__FILE__).'/database.sqlite';
+	//$dbfile = '/var/tmp/database.sqlite';
+	$dbfile = dirname(__FILE__).'/database.sqlite';
 	$pdo = new PDO('sqlite:'.$dbfile);
 	$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // ERRMODE_WARNING | ERRMODE_EXCEPTION | ERRMODE_SILENT

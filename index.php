@@ -3,8 +3,8 @@
 /*** get database data or redirect to config ***/
 
 try {
-	$dbfile = '/var/tmp/database.sqlite';
-	//$dbfile = dirname(__FILE__).'/database.sqlite';
+	//$dbfile = '/var/tmp/database.sqlite';
+	$dbfile = dirname(__FILE__).'/database.sqlite';
 	if (!file_exists($dbfile)){
 		header('Location: config.php');
 	}
